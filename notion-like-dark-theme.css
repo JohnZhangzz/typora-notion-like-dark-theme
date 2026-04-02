@@ -686,6 +686,21 @@ tt {
   color: var(--text-grey);
 }
 
+#file-library-tree .file-node-open-state i.fa-caret-right::before,
+#file-library-tree .file-node-open-state i.fa-caret-down::before {
+    content: ">";
+    font-family: var(--monospace);
+    font-size: 0.95em;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+#file-library-tree .file-node-open-state i.fa-caret-down::before {
+    display: inline-block;
+    transform: rotate(90deg);
+    transform-origin: 45% 55%;
+}
+
 .file-node-content .file-node-title {
   padding-right: 10.2864px;
         font-size: 15px;
@@ -814,20 +829,20 @@ tt {
   cursor: pointer;
 }
 
-/* Hide file icons but keep folder icons/carets. */
-.file-library-file-node > .file-node-content > .file-node-icon i,
-.file-library-file-node > .file-node-content > .file-node-icon::before {
+/* Hide file and folder icons in tree; keep only chevron state indicator. */
+#file-library-tree .file-library-node > .file-node-content > .file-node-icon i,
+#file-library-tree .file-library-node > .file-node-content > .file-node-icon::before {
     visibility: hidden;
 }
 
-.file-library-file-node > .file-node-content > .file-node-icon {
+#file-library-tree .file-library-node > .file-node-content > .file-node-icon {
     width: 0.5em;
     min-width: 0.5em;
     margin-right: 0.1em;
     padding-left: 0 !important;
 }
 
-.os-windows .file-library-file-node > .file-node-content > .file-node-icon {
+.os-windows #file-library-tree .file-library-node > .file-node-content > .file-node-icon {
     width: 0.57em;
     min-width: 0.57em;
 }
