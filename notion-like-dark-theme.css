@@ -1,8 +1,8 @@
 :root {
     /* Text editor */
     --bg-color: #191919;
-    --text-color: #e3e3e3;
-    --body-text-color: #e3e3e3;
+    --text-color: #d4d4d4;
+    --body-text-color: #d4d4d4;
     --text-cursor-color: var(--text-color);
 
     --secondary-text-color: #73726e;
@@ -12,17 +12,17 @@
     --text-highlight-color: #fff;
     --text-highlight-bg: #413324;
 
-    --code-fence-text-color: #ec5757;
+    --code-fence-text-color: #f7f7f7;
     --code-fence-bg-color: #252525;
 
     --blockquote-bg-color: var(--bg-color);
     --blockquote-accent-color: var(--text-color);
     --blockquote-text-color: var(--text-color);
 
-    --light-trait-100: #e3e3e3;
-    --light-trait-200: #e3e3e3;
-    --light-trait-300: #e3e3e3;
-    --light-trait-400: #e3e3e3;
+    --light-trait-100: #d4d4d4;
+    --light-trait-200: #d4d4d4;
+    --light-trait-300: #d4d4d4;
+    --light-trait-400: #d4d4d4;
 
     --todo-bg-color: #2eaadc;
     --todo-tick-color: #fff;
@@ -117,7 +117,7 @@ code {
 }
 
 #write {
-    max-width: 860px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 30px;
     padding-bottom: 100px;
@@ -125,13 +125,13 @@ code {
 
 @media only screen and (min-width: 1400px) {
     #write {
-        max-width: 1024px;
+        max-width: 900px;
     }
 }
 
 @media only screen and (min-width: 1800px) {
     #write {
-        max-width: 1200px;
+        max-width: 1000px;
     }
 }
 
@@ -190,7 +190,7 @@ h1 {
     font-size: 2em;
     line-height: 1.2;
     color: var(--light-trait-100);
-    font-weight: 600;
+    font-weight: 550;
 }
 
 h2 {
@@ -198,26 +198,26 @@ h2 {
     font-size: 1.6em;
     line-height: 1.2;
     color: var(--light-trait-200);
-    font-weight: 600;
+    font-weight: 550;
 }
 
 h3 {
     font-size: 1.3em;
     line-height: 1.2;
     color: var(--light-trait-300);
-    font-weight: 600;
+    font-weight: 550;
 }
 
 h4 {
     font-size: 1.2em;
     color: var(--light-trait-400);
-    font-weight: 600;
+    font-weight: 550;   
 }
 
 h5 {
     font-size: 1em;
     color: var(--light-trait-400);
-    font-weight: 600;
+    font-weight: 550;
 }
 
 h6 {
@@ -1205,4 +1205,9 @@ megamenu-back-btn {
 
 .megamenu-menu-panel table tr:nth-child(2n + 1) {
     background-color: var(--side-bar-bg-color);
+}
+
+strong, b {
+    font-weight: 550; /* 数值可选 100-900，通常 500 或 600 会比默认的 700 更优雅 */
+    color: var(--light-trait-200); /* 你也可以在这里单独给粗体加个稍微亮一点的颜色 */
 }
